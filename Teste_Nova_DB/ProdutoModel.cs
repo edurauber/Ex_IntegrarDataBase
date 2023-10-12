@@ -12,6 +12,7 @@ namespace Teste_Nova_DB
     public class ProdutoModel : ICrud
     {
         public string connectString = "Server=localhost;Database=teste_db;User=root;Password=root;";
+ 
         public void Create()
         {
             ProdutoEntity produto = new ProdutoEntity();
@@ -35,7 +36,14 @@ namespace Teste_Nova_DB
 
         public void Read()
         {
-            throw new NotImplementedException();
+            using (MySqlConnection conn = new MySqlConnection())
+            {
+                IEnumerable<ProdutoEntity> produtos = conn.Query<ProdutoEntity>("SELECT * FROM PRODUTO");
+                foreach (ProdutoEntity produto in produtos)
+                {
+                    produto.Mostrar();
+                }
+            }
         }
 
         public void Update()
