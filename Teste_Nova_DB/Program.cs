@@ -1,4 +1,6 @@
-﻿namespace Teste_Nova_DB
+﻿using Teste_Nova_DB.Model;
+
+namespace Teste_Nova_DB
 {
     internal class Program
     {

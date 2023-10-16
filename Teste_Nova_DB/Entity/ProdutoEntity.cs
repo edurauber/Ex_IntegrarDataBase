@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Teste_Nova_DB
+namespace Teste_Nova_DB.Entity
 {
     public class ProdutoEntity
     {
@@ -16,5 +16,5 @@ namespace Teste_Nova_DB
         {
             Console.WriteLine($"{ID} - {NOME} - {DESCRICAO}");
         }
-    }   
+    }
 }
